@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col">
+			<h1>Découvertes</h1>
+		</div>
+	</div>
+	<div class="row">
+			<div class="col-sm-9">
+				<img src="{{ asset('img/discovery/' ~ discovery.image) }}" class="img-fluid" alt="">
+				<h3>{{ discovery.name }}</h3>
+				<p>{{ discovery.description}}</p>
+
+			</div>
+	</div>
+{% endblock %}
+
+
+
+
+
+
+

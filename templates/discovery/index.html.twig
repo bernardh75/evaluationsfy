@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col">
+			<h1>Découvertes</h1>
+		</div>
+	</div>
+	<div class="row">
+		{% for discovery in results %}
+			<div class="col-sm-3">
+				<img src="{{ asset('img/discovery/' ~ discovery.image) }}" class="img-fluid" alt="">
+				<h3>{{ discovery.name }}</h3>
+				<p>
+					{#<a href="{{ url('discovery.details', { id: discovery.id }) }}" class="btn btn-primary">Visualiser</a>#}
+					<a href="{{ url('discovery.details', { slug: discovery.slug }) }}" class="btn btn-primary">Visualiser</a>
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
